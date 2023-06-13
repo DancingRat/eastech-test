@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <!-- Import own css -->
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+    <!--<div class="test">test 12</div>
+    <button type="button" class="btn test-btn" style="background-color: brown;"
+        onclick="showBtn('test-btn')">Left</button>-->
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-2 sidebar-col">
+                <!--PC layout-->
+                <div class="p-2 mx-2 mt-5 profile"
+                    style="border-radius: 5px;background-color: rgb(250, 250, 250);margin-top: 10rem;width: 100%;padding-top: 100%;position: relative;">
+                    <div style="text-align: center;position: absolute;top: 0; display: flex;justify-content: center;align-items: center;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;">
+                        <div>
+                            <div>
+                                <img src="./image/My-CV-Photo2.jpeg" alt="icon image" width="60" height="60"
+                                    style="border-radius: 50%;">
+                            </div>
+                            <br>
+                            <b>Alex Tong</b>
+                            <div style="color:rgb(179, 179, 179); font-size: 10px;">
+                                <div>Programmer</div>
+                                <div>Yan Yiu House, Yan Shing Court, Fanling, N.T.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-group-vertical side-bar-route-btn-group" role="group">
+                    <button type="button" class="btn side-bar-route-btn">
+                        <div style="display: flex;justify-content: start;">
+                            <div>Home</div>
+                        </div>
+                    </button>
+                    <button type="button" class="btn side-bar-route-btn"
+                        onclick="showSidebarSub('career-sub-btn-group','career-route-arrow')">
+                        <div style="display: flex;justify-content: space-between;">
+                            <div>Career</div>
+                            <div class="career-route-arrow">
+                                <img src="./image/svg/right-arrow-backup-2-svgrepo-com.svg" alt="" width="20"
+                                    height="20">
+                            </div>
+                        </div>
+                    </button>
+                    <div class="btn-group-vertical career-sub-btn-group" role="group"
+                        style="width:100%;font-weight: bold;">
+                        <button type="button" class="btn side-bar-route-btn">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>Career 1</div>
+                            </div>
+                        </button>
+                        <button type="button" class="btn side-bar-route-btn">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>Career 2</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <button type="button" class="btn side-bar-route-btn"
+                        onclick="showSidebarSub('new-staff-sub-btn-group','new-staff-route-arrow')">
+                        <div style="display: flex;justify-content: space-between;">
+                            <div>New staff/Leavers</div>
+                            <div class="new-staff-route-arrow">
+                                <img src="./image/svg/right-arrow-backup-2-svgrepo-com.svg" alt="" width="20"
+                                    height="20">
+                            </div>
+                        </div>
+                    </button>
+                    <div class="btn-group-vertical new-staff-sub-btn-group" role="group"
+                        style="width:100%;font-weight: bold;">
+                        <button type="button" class="btn side-bar-route-btn">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>New Staff 1</div>
+                            </div>
+                        </button>
+                        <button type="button" class="btn side-bar-route-btn">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>News Staff 2</div>
+                            </div>
+                        </button>
+                        <button type="button" class="btn side-bar-route-btn">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>News Staff 3</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <button type="button" class="btn side-bar-route-btn"
+                        onclick="showSidebarSub('pay-sub-btn-group','pay-route-arrow')">
+                        <div style="display: flex;justify-content: space-between;">
+                            <div>Pay & benefits</div>
+                            <div class="pay-route-arrow">
+                                <img src="./image/svg/right-arrow-backup-2-svgrepo-com.svg" alt="" width="20"
+                                    height="20">
+                            </div>
+                        </div>
+                    </button>
+                    <div class="btn-group-vertical pay-sub-btn-group" role="group"
+                        style="width:100%;font-weight: bold;">
+                        <button type="button" class="btn side-bar-route-btn">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>pay benefits 1</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <button type="button" class="btn side-bar-route-btn"
+                        onclick="showSidebarSub('medical-sub-btn-group','medical-route-arrow')">
+                        <div style="display: flex;justify-content: space-between;">
+                            <div>Medical</div>
+                            <div class="medical-route-arrow">
+                                <img src="./image/svg/right-arrow-backup-2-svgrepo-com.svg" alt="" width="20"
+                                    height="20">
+                            </div>
+                        </div>
+                    </button>
+                    <div class="btn-group-vertical medical-sub-btn-group" role="group"
+                        style="width:100%;font-weight: bold;">
+                        <button type="button" class="btn side-bar-route-btn">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>Medical 1</div>
+                            </div>
+                        </button>
+                        <button type="button" class="btn side-bar-route-btn">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>Medical 2</div>
+                            </div>
+                        </button>
+                        <button type="button" class="btn side-bar-route-btn">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>Medical 3</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <button type="button" class="btn side-bar-route-btn"
+                        onclick="showSidebarSub('finance-sub-btn-group','finance-route-arrow')">
+                        <div style="display: flex;justify-content: space-between;">
+                            <div>Finances/Expenses</div>
+                            <div class="finance-route-arrow">
+                                <img src="./image/svg/right-arrow-backup-2-svgrepo-com.svg" alt="" width="20"
+                                    height="20">
+                            </div>
+                        </div>
+                    </button>
+                    <div class="btn-group-vertical finance-sub-btn-group" role="group"
+                        style="width:100%;font-weight: bold;">
+                        <button type="button" class="btn side-bar-route-btn">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>Finance 1</div>
+                            </div>
+                        </button>
+                        <button type="button" class="btn side-bar-route-btn">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>Finance 2</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <button type="button" class="btn side-bar-route-btn"
+                        onclick="showSidebarSub('research-sub-btn-group','research-route-arrow')">
+                        <div style="display: flex;justify-content: space-between;">
+                            <div>Research & knowledge transfer</div>
+                            <div class="research-route-arrow">
+                                <img src="./image/svg/right-arrow-backup-2-svgrepo-com.svg" alt="" width="20"
+                                    height="20">
+                            </div>
+                        </div>
+                    </button>
+                    <div class="btn-group-vertical research-sub-btn-group" role="group"
+                        style="width:100%;font-weight: bold;">
+                        <button type="button" class="btn side-bar-route-btn">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>Research 1</div>
+                            </div>
+                        </button>
+                        <button type="button" class="btn side-bar-route-btn">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>Research 2</div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <button type="button" class="btn side-bar-route-btn"
+                        onclick="showSidebarSub('it-sup-sub-btn-group','it-sup-route-arrow')">
+                        <div style="display: flex;justify-content: space-between;">
+                            <div>IT support</div>
+                            <div class="it-sup-route-arrow">
+                                <img src="./image/svg/right-arrow-backup-2-svgrepo-com.svg" alt="" width="20"
+                                    height="20">
+                            </div>
+                        </div>
+                    </button>
+                    <div class="btn-group-vertical it-sup-sub-btn-group" role="group"
+                        style="width:100%;font-weight: bold;">
+                        <button type="button" class="btn side-bar-route-btn">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>IT support 1</div>
+                            </div>
+                        </button>
+                        <button type="button" class="btn side-bar-route-btn">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>IT support 2</div>
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div>
+                    <button type="button" class="btn quick-links-btn" onclick="showQuickLinks()">
+                        <div style="display: flex;justify-content: start;">
+                            <div>Quick Links</div>
+                            <div class="quick-links-arrow">
+                                <img src="./image/svg/right-arrow-backup-2-svgrepo-com.svg" alt="" width="20"
+                                    height="20">
+                            </div>
+                        </div>
+                    </button>
+                    <div class="quick-links-group-pc">
+                        <div class="btn-group-vertical quick-links-group" role="group"
+                            style="width:100%;font-weight: bold;">
+                            <button type="button" class="btn quick-link-sub-btn">
+                                <a href="#">
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <div>My email</div>
+                                    </div>
+                                </a>
+                            </button>
+                            <button type="button" class="btn quick-link-sub-btn">
+                                <a href="#">
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <div>My eLearning</div>
+                                    </div>
+                                </a>
+                            </button>
+                            <button type="button" class="btn quick-link-sub-btn">
+                                <a href="#">
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <div>My library</div>
+                                    </div>
+                                </a>
+                            </button>
+                            <button type="button" class="btn quick-link-sub-btn">
+                                <a href="#">
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <div>Events</div>
+                                    </div>
+                                </a>
+                            </button>
+                            <button type="button" class="btn quick-link-sub-btn">
+                                <a href="#">
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <div>My department</div>
+                                    </div>
+                                </a>
+                            </button>
+                            <button type="button" class="btn quick-link-sub-btn">
+                                <a href="#">
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <div>PRSD(Non-academic staff)</div>
+                                    </div>
+                                </a>
+                            </button>
+                            <button type="button" class="btn quick-link-sub-btn">
+                                <a href="#">
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <div>Expenses report creation</div>
+                                    </div>
+                                </a>
+                            </button>
+                            <button type="button" class="btn quick-link-sub-btn">
+                                <a href="#">
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <div>Facility management</div>
+                                    </div>
+                                </a>
+                            </button>
+                            <button type="button" class="btn quick-link-sub-btn">
+                                <a href="#">
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <div>Shuttle bus schedule</div>
+                                    </div>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--mobile layout-->
+                <div class="mobile-navbar">
+                    <div class="" style="display: flex;align-items: center;">
+                        <div style="margin-right: 10px;">
+                            <img src="./image/My-CV-Photo2.jpeg" alt="icon image" width="60" height="60"
+                                style="border-radius: 50%;">
+                        </div>
+                        <div style="color:rgb(179, 179, 179); font-size: 10px;width: 50%;">
+                            <b style="color: black;">Alex Tong</b>
+                            <div>Programmer</div>
+                            <div>Yan Yiu House, Yan Shing Court, Fanling, N.T.</div>
+                        </div>
+                    </div>
+
+                    <div class="menu-logo" onclick="showNavPhone()">
+                        <img src="./image/svg/menu-svgrepo-com.svg" alt="" width="30" height="30">
+                    </div>
+                </div>
+                <div class="mobile-navbar-content">
+                    <div class="btn-group-vertical side-bar-route-btn-group-phone" role="group">
+                        <button type="button" class="btn side-bar-route-btn">
+                            <div style="display: flex;justify-content: start;">
+                                <div>Home</div>
+                            </div>
+                        </button>
+                        <button type="button" class="btn side-bar-route-btn"
+                            onclick="showSidebarSub('career-sub-btn-group','career-route-arrow')">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>Career</div>
+                                <div class="career-route-arrow">
+                                    <img src="./image/svg/right-arrow-backup-2-svgrepo-com.svg" alt="" width="20"
+                                        height="20">
+                                </div>
+                            </div>
+                        </button>
+                        <div class="btn-group-vertical career-sub-btn-group" role="group"
+                            style="width:100%;font-weight: bold;">
+                            <button type="button" class="btn side-bar-route-btn">
+                                <div style="display: flex;justify-content: space-between;">
+                                    <div>Career 1</div>
+                                </div>
+                            </button>
+                            <button type="button" class="btn side-bar-route-btn">
+                                <div style="display: flex;justify-content: space-between;">
+                                    <div>Career 2</div>
+                                </div>
+                            </button>
+                        </div>
+
+                        <button type="button" class="btn side-bar-route-btn"
+                            onclick="showSidebarSub('new-staff-sub-btn-group','new-staff-route-arrow')">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>New staff/Leavers</div>
+                                <div class="new-staff-route-arrow">
+                                    <img src="./image/svg/right-arrow-backup-2-svgrepo-com.svg" alt="" width="20"
+                                        height="20">
+                                </div>
+                            </div>
+                        </button>
+                        <div class="btn-group-vertical new-staff-sub-btn-group" role="group"
+                            style="width:100%;font-weight: bold;">
+                            <button type="button" class="btn side-bar-route-btn">
+                                <div style="display: flex;justify-content: space-between;">
+                                    <div>New Staff 1</div>
+                                </div>
+                            </button>
+                            <button type="button" class="btn side-bar-route-btn">
+                                <div style="display: flex;justify-content: space-between;">
+                                    <div>News Staff 2</div>
+                                </div>
+                            </button>
+                            <button type="button" class="btn side-bar-route-btn">
+                                <div style="display: flex;justify-content: space-between;">
+                                    <div>News Staff 3</div>
+                                </div>
+                            </button>
+                        </div>
+
+                        <button type="button" class="btn side-bar-route-btn"
+                            onclick="showSidebarSub('pay-sub-btn-group','pay-route-arrow')">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>Pay & benefits</div>
+                                <div class="pay-route-arrow">
+                                    <img src="./image/svg/right-arrow-backup-2-svgrepo-com.svg" alt="" width="20"
+                                        height="20">
+                                </div>
+                            </div>
+                        </button>
+                        <div class="btn-group-vertical pay-sub-btn-group" role="group"
+                            style="width:100%;font-weight: bold;">
+                            <button type="button" class="btn side-bar-route-btn">
+                                <div style="display: flex;justify-content: space-between;">
+                                    <div>pay benefits 1</div>
+                                </div>
+                            </button>
+                        </div>
+
+                        <button type="button" class="btn side-bar-route-btn"
+                            onclick="showSidebarSub('medical-sub-btn-group','medical-route-arrow')">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>Medical</div>
+                                <div class="medical-route-arrow">
+                                    <img src="./image/svg/right-arrow-backup-2-svgrepo-com.svg" alt="" width="20"
+                                        height="20">
+                                </div>
+                            </div>
+                        </button>
+                        <div class="btn-group-vertical medical-sub-btn-group" role="group"
+                            style="width:100%;font-weight: bold;">
+                            <button type="button" class="btn side-bar-route-btn">
+                                <div style="display: flex;justify-content: space-between;">
+                                    <div>Medical 1</div>
+                                </div>
+                            </button>
+                            <button type="button" class="btn side-bar-route-btn">
+                                <div style="display: flex;justify-content: space-between;">
+                                    <div>Medical 2</div>
+                                </div>
+                            </button>
+                            <button type="button" class="btn side-bar-route-btn">
+                                <div style="display: flex;justify-content: space-between;">
+                                    <div>Medical 3</div>
+                                </div>
+                            </button>
+                        </div>
+
+                        <button type="button" class="btn side-bar-route-btn"
+                            onclick="showSidebarSub('finance-sub-btn-group','finance-route-arrow')">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>Finances/Expenses</div>
+                                <div class="finance-route-arrow">
+                                    <img src="./image/svg/right-arrow-backup-2-svgrepo-com.svg" alt="" width="20"
+                                        height="20">
+                                </div>
+                            </div>
+                        </button>
+                        <div class="btn-group-vertical finance-sub-btn-group" role="group"
+                            style="width:100%;font-weight: bold;">
+                            <button type="button" class="btn side-bar-route-btn">
+                                <div style="display: flex;justify-content: space-between;">
+                                    <div>Finance 1</div>
+                                </div>
+                            </button>
+                            <button type="button" class="btn side-bar-route-btn">
+                                <div style="display: flex;justify-content: space-between;">
+                                    <div>Finance 2</div>
+                                </div>
+                            </button>
+                        </div>
+
+                        <button type="button" class="btn side-bar-route-btn"
+                            onclick="showSidebarSub('research-sub-btn-group','research-route-arrow')">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>Research & knowledge transfer</div>
+                                <div class="research-route-arrow">
+                                    <img src="./image/svg/right-arrow-backup-2-svgrepo-com.svg" alt="" width="20"
+                                        height="20">
+                                </div>
+                            </div>
+                        </button>
+                        <div class="btn-group-vertical research-sub-btn-group" role="group"
+                            style="width:100%;font-weight: bold;">
+                            <button type="button" class="btn side-bar-route-btn">
+                                <div style="display: flex;justify-content: space-between;">
+                                    <div>Research 1</div>
+                                </div>
+                            </button>
+                            <button type="button" class="btn side-bar-route-btn">
+                                <div style="display: flex;justify-content: space-between;">
+                                    <div>Research 2</div>
+                                </div>
+                            </button>
+                        </div>
+
+                        <button type="button" class="btn side-bar-route-btn"
+                            onclick="showSidebarSub('it-sup-sub-btn-group','it-sup-route-arrow')">
+                            <div style="display: flex;justify-content: space-between;">
+                                <div>IT support</div>
+                                <div class="it-sup-route-arrow">
+                                    <img src="./image/svg/right-arrow-backup-2-svgrepo-com.svg" alt="" width="20"
+                                        height="20">
+                                </div>
+                            </div>
+                        </button>
+                        <div class="btn-group-vertical it-sup-sub-btn-group" role="group"
+                            style="width:100%;font-weight: bold;">
+                            <button type="button" class="btn side-bar-route-btn">
+                                <div style="display: flex;justify-content: space-between;">
+                                    <div>IT support 1</div>
+                                </div>
+                            </button>
+                            <button type="button" class="btn side-bar-route-btn">
+                                <div style="display: flex;justify-content: space-between;">
+                                    <div>IT support 2</div>
+                                </div>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <button type="button" class="btn quick-links-btn-phone" onclick="showQuickLinks()">
+                            <div style="display: flex;justify-content: start;">
+                                <div>Quick Links</div>
+                                <div class="quick-links-arrow">
+                                    <img src="./image/svg/right-arrow-backup-2-svgrepo-com.svg" alt="" width="20"
+                                        height="20">
+                                </div>
+                            </div>
+                        </button>
+                        <div class="btn-group-vertical quick-links-group" role="group"
+                            style="width:100%;font-weight: bold;">
+                            <button type="button" class="btn quick-link-sub-btn">
+                                <a href="#">
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <div>My email</div>
+                                    </div>
+                                </a>
+                            </button>
+                            <button type="button" class="btn quick-link-sub-btn">
+                                <a href="#">
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <div>My eLearning</div>
+                                    </div>
+                                </a>
+                            </button>
+                            <button type="button" class="btn quick-link-sub-btn">
+                                <a href="#">
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <div>My library</div>
+                                    </div>
+                                </a>
+                            </button>
+                            <button type="button" class="btn quick-link-sub-btn">
+                                <a href="#">
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <div>Events</div>
+                                    </div>
+                                </a>
+                            </button>
+                            <button type="button" class="btn quick-link-sub-btn">
+                                <a href="#">
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <div>My department</div>
+                                    </div>
+                                </a>
+                            </button>
+                            <button type="button" class="btn quick-link-sub-btn">
+                                <a href="#">
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <div>PRSD(Non-academic staff)</div>
+                                    </div>
+                                </a>
+                            </button>
+                            <button type="button" class="btn quick-link-sub-btn">
+                                <a href="#">
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <div>Expenses report creation</div>
+                                    </div>
+                                </a>
+                            </button>
+                            <button type="button" class="btn quick-link-sub-btn">
+                                <a href="#">
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <div>Facility management</div>
+                                    </div>
+                                </a>
+                            </button>
+                            <button type="button" class="btn quick-link-sub-btn">
+                                <a href="#">
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <div>Shuttle bus schedule</div>
+                                    </div>
+                                </a>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-12 col-md-7 middle-col">
+                <div class="alert alert-warning alert-dismissible" role="alert" style="margin:1rem 0;">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    School will be suspended all day if red or black rainstorm warnings are issued before 8am, but
+                    classes should continue if warnings are issued after 8am.
+                </div>
+                <div class="banner-area-pc" style="position: relative;">
+                    <img src="./image/banner-img02.png" alt="icon image" width="100%" height="auto">
+                    <div class="" style="color:white;left:10%;bottom:20%;top:0px;width:35%;position:absolute;
+                    display: flex;justify-content: center;align-items: center;">
+                        <div>
+                            <h1 style="font-size: 30px;font-weight: bold;">Good afternoon, Woody</h1>
+                            <p style="font-size: 17px;">
+                                Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
+                                industries for previewing layouts and visual mockups
+                            </p>
+                            <button type="button" class="btn to-portal-btn">
+                                Go to portal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-area-phone" style="position: relative;">
+                    <img src="./image/banner-img02.png" alt="icon image" width="100%" height="auto">
+                    <div class="" style="color:white;left:8%;bottom:0px;top:0px;width:90%;position:absolute;
+                    display: flex;justify-content: space-between;align-items: center;">
+                        <div>
+                            <h1 style="font-size: 16px;font-weight: bold;margin:8px 0">Good afternoon, Woody</h1>
+                            <div style="font-size: 12px;">
+                                Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
+                                industries for previewing layouts and visual mockups
+                            </div>
+                        </div>
+                        <div style="margin-left: 5px;">
+                            <button type="button" class="btn to-portal-btn">
+                                Go to portal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-news-heading-area">
+                    <div style="font-size: 25px; font-weight: bold;">
+                        Recent News <span style="cursor: pointer;"><img src="./image/svg/reload-svgrepo-com.svg" alt=""
+                                width="22" height="22"></span>
+                    </div>
+                    <div class="view-all-btn">View all
+                        news</div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 recent-news-img-col" style="padding: 0;">
+                            <div class="position-relative">
+                                <img width="100%" height="auto" src="./image/credit-suisse.png"
+                                    class="solution-banner-img" />
+                                <div class="position-absolute credit-suisse-img-overlay" style="position:absolute;left:0px;bottom:0px;opacity:0.7;background:black;
+                                width:100%;padding: 1rem;">
+                                    <div style="color:white;font-size: 14px;">Credit Sussie to borrow up to $54n from
+                                        Swiss Central bank.</div>
+                                    <a href="#" style="color: white;opacity: 0.6;font-size: 12px;">Read full article</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 recent-news-col" style="padding: 0;">
+                            <div class="recent-news-div">
+                                <div>
+                                    <div class="recent-news-header">Credit Suisse to borrow up to $54bn from Swiss
+                                        central bank</div>
+                                    <div class="recent-news-intro">The lender said it was taking decisive action to
+                                        strengthen its liquidity as it looked to become a simpler bank. Snares in Credit
+                                        Sussie fell 24%
+                                        on Wednesday after it said it had found "weaknewss" in its financial reporting
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div style="height: 2%;"></div>
+                            <div class="recent-news-div">
+                                <div style="height: 2%;"></div>
+                                <div>
+                                    <div class="recent-news-header">Credit Suisse to borrow up to $54bn from Swiss
+                                        central bank</div>
+                                    <div class="recent-news-intro">The lender said it was taking decisive action to
+                                        strengthen its liquidity as it looked to become a simpler bank. Snares in Credit
+                                        Sussie fell 24%
+                                        on Wednesday after it said it had found "weaknewss" in its financial reporting
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div style="height: 2%;"></div>
+                            <div class="recent-news-div">
+                                <div style="height: 2%;"></div>
+                                <div>
+                                    <div class="recent-news-header">Credit Suisse to borrow up to $54bn from Swiss
+                                        central bank</div>
+                                    <div class="recent-news-intro">The lender said it was taking decisive action to
+                                        strengthen its liquidity as it looked to become a simpler bank. Snares in Credit
+                                        Sussie fell 24%
+                                        on Wednesday after it said it had found "weaknewss" in its financial reporting
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="height: 2%;"></div>
+                            <div class="recent-news-div">
+                                <div style="height: 2%;"></div>
+                                <div>
+                                    <div class="recent-news-header">Credit Suisse to borrow up to $54bn from Swiss
+                                        central bank</div>
+                                    <div class="recent-news-intro">The lender said it was taking decisive action to
+                                        strengthen its liquidity as it looked to become a simpler bank. Snares in Credit
+                                        Sussie fell 24%
+                                        on Wednesday after it said it had found "weaknewss" in its financial reporting
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 recent-news-col-phone" style="padding: 0;">
+                            <div class="recent-news-div">
+                                <div>
+                                    <div class="recent-news-header">Credit Suisse to borrow up to $54bn from Swiss
+                                        central bank</div>
+                                    <div class="recent-news-intro">The lender said it was taking decisive action to
+                                        strengthen its liquidity as it looked to become a simpler bank. Snares in Credit
+                                        Sussie fell 24%
+                                        on Wednesday after it said it had found "weaknewss" in its financial reporting
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div style="height: 2%;"></div>
+                            <div class="recent-news-div">
+                                <div style="height: 2%;"></div>
+                                <div>
+                                    <div class="recent-news-header">Credit Suisse to borrow up to $54bn from Swiss
+                                        central bank</div>
+                                    <div class="recent-news-intro">The lender said it was taking decisive action to
+                                        strengthen its liquidity as it looked to become a simpler bank. Snares in Credit
+                                        Sussie fell 24%
+                                        on Wednesday after it said it had found "weaknewss" in its financial reporting
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div style="height: 2%;"></div>
+                            <div class="recent-news-div">
+                                <div style="height: 2%;"></div>
+                                <div>
+                                    <div class="recent-news-header">Credit Suisse to borrow up to $54bn from Swiss
+                                        central bank</div>
+                                    <div class="recent-news-intro">The lender said it was taking decisive action to
+                                        strengthen its liquidity as it looked to become a simpler bank. Snares in Credit
+                                        Sussie fell 24%
+                                        on Wednesday after it said it had found "weaknewss" in its financial reporting
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="height: 2%;"></div>
+                            <div class="recent-news-div">
+                                <div style="height: 2%;"></div>
+                                <div>
+                                    <div class="recent-news-header">Credit Suisse to borrow up to $54bn from Swiss
+                                        central bank</div>
+                                    <div class="recent-news-intro">The lender said it was taking decisive action to
+                                        strengthen its liquidity as it looked to become a simpler bank. Snares in Credit
+                                        Sussie fell 24%
+                                        on Wednesday after it said it had found "weaknewss" in its financial reporting
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my-fav-heading-area">
+                    <div style="font-size: 25px; font-weight: bold;">
+                        My Favourites
+                    </div>
+                    <div style="cursor: pointer;">
+                        <img src="./image/svg/settings-svgrepo-com.svg" alt="" width="22" height="22">
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row my-fav-content-row">
+                        <div class="col-12 col-md-2 my-fav-col" style="background-color: rgb(235, 247, 254);">
+                            <div>
+                                <div class="my-fav-headings">Apply Leave</div>
+                                <div class="my-fav-text">Leave Application</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-2 my-fav-col" style="background-color: rgb(253, 242, 232);">
+                            <div>
+                                <div class="my-fav-headings">Research Outputs</div>
+                                <div class="my-fav-text">Research Outputs</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-2 my-fav-col" style="background-color: rgb(252, 230, 249);">
+                            <div>
+                                <div class="my-fav-headings">KE Activities</div>
+                                <div class="my-fav-text">KE Activities System</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-2 my-fav-col" style="background-color: rgb(255, 255, 235);">
+                            <div>
+                                <div class="my-fav-headings">Personnel File</div>
+                                <div class="my-fav-text">Personnel File Systtem</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-2 my-fav-col" style="background-color: rgb(232, 238, 255);">
+                            <div>
+                                <div class="my-fav-headings">Bulk Email</div>
+                                <div class="my-fav-text">Submit Request</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 leave-col">
+                            <div class="leave-heading-area">
+                                <div style="font-size: 25px; font-weight: bold;">
+                                    Leave
+                                </div>
+                                <div>
+                                    <button type="button" class="btn apply-leave-btn">
+                                        Apply leave
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div id="leave-content-container">
+
+                            </div>
+                            <div id="leave-content-container-phone">
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 payroll-col">
+                            <div class="payroll-heading-area">
+                                <div style="font-size: 25px; font-weight: bold;">
+                                    Payroll system
+                                </div>
+                                <div class="view-all-btn">View all</div>
+                            </div>
+
+                            <div id="payroll-content-container">
+                                <div>
+                                    <div class="row payroll-content-row" style="padding: 1rem 0 1rem;">
+                                        <div class="col-xs-5">
+                                            <div class="payroll-content-text">Autopay</div>
+                                            <div class="payroll-content-type">Payment-method</div>
+                                        </div>
+                                        <div class="col-xs-5">
+                                            <div class="payroll-content-text">2023/05/12</div>
+                                            <div class="payroll-content-type">Date</div>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <img src="./image/svg/download-svgrepo-com.svg" alt="" width="25"
+                                                height="25" style="cursor: pointer;">
+                                        </div>
+                                    </div>
+                                    <div class="row payroll-content-row" style="padding: 1rem 0 1rem;">
+                                        <div class="col-xs-5">
+                                            <div class="payroll-content-text">Cheque</div>
+                                            <div class="payroll-content-type">Payment-method</div>
+                                        </div>
+                                        <div class="col-xs-5">
+                                            <div class="payroll-content-text">2023/05/12</div>
+                                            <div class="payroll-content-type">Date</div>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <img src="./image/svg/download-svgrepo-com.svg" alt="" width="25"
+                                                height="25" style="cursor: pointer;">
+                                        </div>
+                                    </div>
+                                    <div class="row payroll-content-row" style="padding: 1rem 0 1rem;">
+                                        <div class="col-xs-5">
+                                            <div class="payroll-content-text">Autopay</div>
+                                            <div class="payroll-content-type">Payment-method</div>
+                                        </div>
+                                        <div class="col-xs-5">
+                                            <div class="payroll-content-text">2023/05/12</div>
+                                            <div class="payroll-content-type">Date</div>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <img src="./image/svg/download-svgrepo-com.svg" alt="" width="25"
+                                                height="25" style="cursor: pointer;">
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding: 1rem 0 1rem;">
+                                        <div class="col-xs-10 payroll-content-header">Tax returns result report in
+                                            2021-2022 tax year</div>
+                                        <div class="col-xs-2">
+                                            <img src="./image/svg/download-svgrepo-com.svg" alt="" width="25"
+                                                height="25" style="cursor: pointer;">
+                                        </div>
+                                    </div>
+                                    <div class="row payroll-content-row" style="padding: 1rem 0 1rem;">
+                                        <div class="col-xs-5">
+                                            <div class="payroll-content-text">Autopay</div>
+                                            <div class="payroll-content-type">Payment-method</div>
+                                        </div>
+                                        <div class="col-xs-5">
+                                            <div class="payroll-content-text">2023/05/12</div>
+                                            <div class="payroll-content-type">Date</div>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <img src="./image/svg/download-svgrepo-com.svg" alt="" width="25"
+                                                height="25" style="cursor: pointer;">
+                                        </div>
+                                    </div>
+                                    <div class="row payroll-content-row" style="padding: 1rem 0 1rem;">
+                                        <div class="col-xs-5">
+                                            <div class="payroll-content-text">Cheque</div>
+                                            <div class="payroll-content-type">Payment-method</div>
+                                        </div>
+                                        <div class="col-xs-5">
+                                            <div class="payroll-content-text">2023/05/12</div>
+                                            <div class="payroll-content-type">Date</div>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <img src="./image/svg/download-svgrepo-com.svg" alt="" width="25"
+                                                height="25" style="cursor: pointer;">
+                                        </div>
+                                    </div>
+                                    <div class="row payroll-content-row" style="padding: 1rem 0 1rem;">
+                                        <div class="col-xs-5">
+                                            <div class="payroll-content-text">Autopay</div>
+                                            <div class="payroll-content-type">Payment-method</div>
+                                        </div>
+                                        <div class="col-xs-5">
+                                            <div class="payroll-content-text">2023/05/12</div>
+                                            <div class="payroll-content-type">Date</div>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <img src="./image/svg/download-svgrepo-com.svg" alt="" width="25"
+                                                height="25" style="cursor: pointer;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 library-col">
+                            <div class="library-heading-area">
+                                <div style="font-size: 25px; font-weight: bold;">
+                                    Library System
+                                </div>
+                                <div class="view-all-btn">View all</div>
+                            </div>
+                            <div id="library-content-container">
+                                <div class="row library-content-row"
+                                    style="padding: 1rem 0 1rem; font-size:14px;color:rgb(184, 184, 184);">
+                                    <div class="col-xs-5" style="display: flex;align-items: center;">
+                                        <div class="">Back name</div>
+                                        <div><img src="./image/svg/sort-icon.svg" alt="" width="25" height="25"
+                                                style="cursor: pointer;"></div>
+                                    </div>
+                                    <div class="col-xs-3" style="display: flex;align-items: center;">
+                                        <div class="">Book drop</div>
+                                        <div><img src="./image/svg/sort-icon.svg" alt="" width="25" height="25"
+                                                style="cursor: pointer;"></div>
+                                    </div>
+                                    <div class="col-xs-3" style="display: flex;align-items: center;">
+                                        <div class="">Return date</div>
+                                        <div><img src="./image/svg/sort-icon.svg" alt="" width="25" height="25"
+                                                style="cursor: pointer;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row library-content-row" style="padding: 1rem 0 1rem;">
+                                    <div class="col-xs-5">
+                                        <div class="library-content-text">HarryPotter and te Soccerer's</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="library-content-text">Dental Library</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="library-content-text">2023/02/17</div>
+                                    </div>
+                                </div>
+                                <div class="row library-content-row" style="padding: 1rem 0 1rem;">
+                                    <div class="col-xs-5">
+                                        <div class="library-content-text">Frankenstein</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="library-content-text">Main Library</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="library-content-text">2023/02/17</div>
+                                    </div>
+                                </div>
+                                <div class="row library-content-row" style="padding: 1rem 0 1rem;">
+                                    <div class="col-xs-5">
+                                        <div class="library-content-text">HarryPotter and te Soccerer's Vol.2</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="library-content-text">Main Library</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="library-content-text">2023/02/17</div>
+                                    </div>
+                                </div>
+                                <div class="row library-content-row" style="padding: 1rem 0 1rem;">
+                                    <div class="col-xs-5">
+                                        <div class="library-content-text">The avator triology</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="library-content-text">Dental Library</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="library-content-text">2023/02/17</div>
+                                    </div>
+                                </div>
+                                <div class="row library-content-row" style="padding: 1rem 0 1rem;">
+                                    <div class="col-xs-5">
+                                        <div class="library-content-text">HarryPotter and te Soccerer's Vol.3</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="library-content-text">Main Library</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="library-content-text">2023/02/17</div>
+                                    </div>
+                                </div>
+                                <div class="row library-content-row" style="padding: 1rem 0 1rem;">
+                                    <div class="col-xs-5">
+                                        <div class="library-content-text">The avator triology Vol2</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="library-content-text">Main Library</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="library-content-text">2023/02/17</div>
+                                    </div>
+                                </div>
+                                <div class="row library-content-row" style="padding: 1rem 0 1rem;">
+                                    <div class="col-xs-5">
+                                        <div class="library-content-text">The avator triology Vol3</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="library-content-text">Dental Library</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="library-content-text">2023/02/17</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 booking-col">
+                            <div class="booking-heading-area">
+                                <div style="font-size: 25px; font-weight: bold;">
+                                    Booking
+                                </div>
+                                <div class="view-all-btn">View all</div>
+                            </div>
+
+                            <div id="booking-content-container">
+                                <div class="row booking-content-row">
+                                    <div class="col-xs-3" style="display: flex;align-items: center;">
+                                        <div class="">Name</div>
+                                        <div class="sort-icon-pc"><img src="./image/svg/sort-icon.svg" alt=""
+                                                width="25" height="25" style="cursor: pointer;"></div>
+                                        <div class="sort-icon-phone"><img src="./image/svg/sort-icon.svg" alt=""
+                                                width="20" height="20" style="cursor: pointer;"></div>
+                                    </div>
+                                    <div class="col-xs-3" style="display: flex;align-items: center;">
+                                        <div class="">Time</div>
+                                        <div class="sort-icon-pc"><img src="./image/svg/sort-icon.svg" alt=""
+                                                width="25" height="25" style="cursor: pointer;"></div>
+                                        <div class="booking-sort-icon-phone"><img src="./image/svg/sort-icon.svg" alt=""
+                                                width="20" height="20" style="cursor: pointer;"></div>
+                                    </div>
+                                    <div class="col-xs-3" style="display: flex;align-items: center;">
+                                        <div class="">Provider</div>
+                                        <div class="sort-icon-pc"><img src="./image/svg/sort-icon.svg" alt=""
+                                                width="25" height="25" style="cursor: pointer;"></div>
+                                        <div class="sort-icon-phone"><img src="./image/svg/sort-icon.svg" alt=""
+                                                width="20" height="20" style="cursor: pointer;"></div>
+                                    </div>
+                                    <div class="col-xs-3" style="display: flex;align-items: center;">
+                                        <div class="">Type</div>
+                                        <div class="sort-icon-pc"><img src="./image/svg/sort-icon.svg" alt=""
+                                                width="25" height="25" style="cursor: pointer;"></div>
+                                        <div class="sort-icon-phone"><img src="./image/svg/sort-icon.svg" alt=""
+                                                width="20" height="20" style="cursor: pointer;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="padding: 1rem 0 1rem;">
+                                    <div class="col-xs-3">
+                                        <div class="booking-content-text">Woody Chu</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="booking-content-text">20 Feb 2023</div>
+                                        <div class="booking-content-time">10:00am</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="booking-content-text">Dr. Kee Chun Kit</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="">
+                                            <button type="button" class="btn booking-content-button"
+                                                style="background-color:rgb(246, 222, 230);color:rgb(199, 158, 180);">
+                                                Dental
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row"
+                                    style="padding: 1rem 0 1rem;border-bottom: 1px solid rgb(243, 243, 243);">
+                                    <div class="col-xs-3">
+                                        <div class="booking-content-text">Tom Chu</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="booking-content-text">01 Mar 2023</div>
+                                        <div class="booking-content-time">10:00am</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="booking-content-text">Laboratory</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="">
+                                            <button type="button" class="btn booking-content-button"
+                                                style="background-color:rgb(251, 245, 233);color:rgb(228, 216, 182);">
+                                                Lab
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="padding: 1rem 0 1rem;">
+                                    <div class="col-xs-3">
+                                        <div class="booking-content-text">Woody Chu</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="booking-content-text">20 Feb 2023</div>
+                                        <div class="booking-content-time">10:00am</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="booking-content-text">Dr. Kee Chun Kit</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="">
+                                            <button type="button" class="btn booking-content-button"
+                                                style="background-color:rgb(180, 227, 243);color:rgb(129, 179, 205);">
+                                                Medical
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row"
+                                    style="padding: 1rem 0 1rem;border-bottom: 1px solid rgb(243, 243, 243);">
+                                    <div class="col-xs-3">
+                                        <div class="booking-content-text">Woody Chu</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="booking-content-text">20 Feb 2023</div>
+                                        <div class="booking-content-time">10:00am</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="booking-content-text">Dr. Kee Chun Kit</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="">
+                                            <button type="button" class="btn booking-content-button"
+                                                style="background-color:rgb(250, 220, 236);color:rgb(192, 151, 174);">
+                                                Dental
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="padding: 1rem 0 1rem;">
+                                    <div class="col-xs-3">
+                                        <div class="booking-content-text">Woody Chu</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="booking-content-text">20 Feb 2023</div>
+                                        <div class="booking-content-time">10:00am</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="booking-content-text">Dr. Kee Chun Kit</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="">
+                                            <button type="button" class="btn booking-content-button"
+                                                style="background-color:rgb(246, 222, 230);color:rgb(199, 158, 180);">
+                                                Dental
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row"
+                                    style="padding: 1rem 0 1rem;border-bottom: 1px solid rgb(243, 243, 243);">
+                                    <div class="col-xs-3">
+                                        <div class="booking-content-text">Tom Chu</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="booking-content-text">01 Mar 2023</div>
+                                        <div class="booking-content-time">10:00am</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="booking-content-text">Laboratory</div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="">
+                                            <button type="button" class="btn booking-content-button"
+                                                style="background-color:rgb(251, 245, 233);color:rgb(228, 216, 182);">
+                                                Lab
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3 approval-col">
+                            <div style="font-size: 25px; font-weight: bold;">Approvals</div>
+
+                            <div class="approval-content-div">
+                                <div>ECA</div>
+                                <div class="approval-content-num">4</div>
+                            </div>
+                            <div class="approval-content-div">
+                                <div>PRSD</div>
+                                <div class="approval-content-num">10</div>
+                            </div>
+                            <div class="approval-content-div">
+                                <div>Leave</div>
+                                <div class="approval-content-num">2</div>
+                            </div>
+                            <div class="approval-content-div">
+                                <div>FBS</div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-9 claims-col">
+                            <div class="claims-heading-area">
+                                <div style="font-size: 25px; font-weight: bold;">
+                                    Claims
+                                </div>
+                                <div class="view-all-btn">View all</div>
+                            </div>
+
+                            <div id="claims-content-container">
+                                <div class="row claims-content-row claims-content-row-first">
+                                    <div class="col-xs-2">
+                                        <div class="">Departure</div>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <div class="">Arrival</div>
+                                    </div>
+                                    <div class="col-xs-2" style="display: flex;">
+                                        <div class="">Claim amount</div>
+                                        <div class="sort-icon-pc"><img src="./image/svg/sort-icon.svg" alt="" width="25" height="25"
+                                                style="cursor: pointer;"></div>
+                                        <div class="sort-icon-phone"><img src="./image/svg/sort-icon.svg" alt=""
+                                                width="20" height="20" style="cursor: pointer;"></div>
+                                    </div>
+                                    <div class="col-xs-2" style="display: flex;">
+                                        <div class="">Travel Type</div>
+                                        <div class="sort-icon-pc"><img src="./image/svg/sort-icon.svg" alt="" width="25" height="25"
+                                                style="cursor: pointer;"></div>
+                                        <div class="sort-icon-phone"><img src="./image/svg/sort-icon.svg" alt=""
+                                                width="20" height="20" style="cursor: pointer;"></div>
+                                    </div>
+                                    <div class="col-xs-2" style="display: flex;">
+                                        <div class="">Filing Date</div>
+                                        <div class="sort-icon-pc"><img src="./image/svg/sort-icon.svg" alt="" width="25" height="25"
+                                                style="cursor: pointer;"></div>
+                                        <div class="sort-icon-phone"><img src="./image/svg/sort-icon.svg" alt=""
+                                                width="20" height="20" style="cursor: pointer;"></div>
+                                    </div>
+                                    <div class="col-xs-2" style="display: flex;">
+                                        <div class="">Status</div>
+                                        <div class="sort-icon-pc"><img src="./image/svg/sort-icon.svg" alt="" width="25"
+                                                height="25" style="cursor: pointer;"></div>
+                                        <div class="sort-icon-phone"><img src="./image/svg/sort-icon.svg" alt=""
+                                                width="20" height="20" style="cursor: pointer;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row claims-content-row" style="padding: 1rem 0 1rem;">
+                                    <div class="col-xs-2 claims-content-col">
+                                        <div class="claims-content-text">Heathrow Airport, London</div>
+                                    </div>
+                                    <div class="col-xs-3 col-md-2 claims-content-col">
+                                        <div class="claims-content-text">International Airport, Hong Kong</div>
+                                    </div>
+                                    <div class="col-xs-2 claims-content-col">
+                                        <div class="claims-content-text">14000 HKD</div>
+                                    </div>
+                                    <div class="col-xs-2 claims-content-col">
+                                        <div class="claims-content-text">Business</div>
+                                    </div>
+                                    <div class="col-xs-2 claims-content-col">
+                                        <div class="claims-content-text">20 Feb 2023</div>
+                                        <div class="claims-content-time">22:10</div>
+                                    </div>
+                                    <div class="col-xs-1 col-md-2 claims-content-col">
+                                        <div class="claims-content-text">Waiting for approval</div>
+                                    </div>
+                                </div>
+                                <div class="row claims-content-row" style="padding: 1rem 0 1rem;">
+                                    <div class="col-xs-2 claims-content-col">
+                                        <div class="claims-content-text">HKU Campus</div>
+                                    </div>
+                                    <div class="col-xs-3 col-md-2 claims-content-col">
+                                        <div class="claims-content-text">International Airport, Hong Kong</div>
+                                    </div>
+                                    <div class="col-xs-2 claims-content-col">
+                                        <div class="claims-content-text">300 HKD</div>
+                                    </div>
+                                    <div class="col-xs-2 claims-content-col">
+                                        <div class="claims-content-text">Local</div>
+                                    </div>
+                                    <div class="col-xs-2 claims-content-col">
+                                        <div class="claims-content-text">20 Feb 2023</div>
+                                        <div class="claims-content-time">22:10</div>
+                                    </div>
+                                    <div class="col-xs-1 col-md-2 claims-content-col">
+                                        <div class="claims-content-text">Approved</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3" style="background-color: white;">
+                <div class="search-bar-container">
+                    <div style="display: flex;align-items: center;">
+                        <div>
+                            <img src="./image/svg/search-svgrepo-com.svg" alt="" width="25" height="25">
+                        </div>
+                        <div class="" style="width: 80%;">
+                            <input type="text" class="search-input" placeholder="Search">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="" style="position: relative;">
+                    <img src="./image/weather01.png" alt="weather image" width="100%" height="auto">
+                    <div class="" style="color:white;left:10%;bottom:0px;top:0px;width:80%;position:absolute;
+                    display: flex;justify-content: center;align-items: center;">
+                        <div style="font-size: 14px;">
+                            <div>Sunday</div>
+                            <div style="display: flex;align-items: center;">
+                                <div style="font-size: 40px;">23</div>
+                                <sup style="font-size: 18px;padding-right: 2rem;">O</sup>
+                                <div style="border-left: 1px solid white;padding-left: 1rem;">
+                                    <div>Monday,21 september</div>
+                                    <div>Yau Tsim Mong District, Hong Kong</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calendar">
+                    <div class="header">
+                        <button class="prev-btn">&lt;</button>
+                        <h2 class="month-year"></h2>
+                        <button class="next-btn">&gt;</button>
+                    </div>
+                    <div class="weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="days"></div>
+                </div>
+
+                <div>
+                    <button type="button" class="btn daily-event-btn" onclick="showDailyEvent()">
+                        <div style="display: flex;justify-content: start;">
+                            <div>Daily Events</div>
+                            <div class="daily-event-arrow">
+                                <img src="./image/svg/right-arrow-backup-2-svgrepo-com.svg" alt="" width="20"
+                                    height="20">
+                            </div>
+                        </div>
+                    </button>
+                    <div class="daily-event-group" style="width:100%;">
+                        <div class="row daily-event-row">
+                            <div class="col-md-8 daily-event-heading">
+                                UwsS bi-weekly regular meeting (alternate week with iTL meeting)
+                            </div>
+                            <div class="col-md-4 daily-event-time">
+                                <div>10:00am - 12:00pm</div>
+                                <div style="color: rgb(192, 192, 192);">1F, Room 4</div>
+                            </div>
+                        </div>
+
+                        <div class="row daily-event-row">
+                            <div class="col-md-8 daily-event-heading">
+                                Web & mobility technologies team pre-meeting
+                            </div>
+                            <div class="col-md-4 daily-event-time">
+                                <div>4:00pm - 6:00pm</div>
+                                <button type="button" class="btn"
+                                    style="color: white;background-color: rgb(99, 136, 178);border-radius: 20px;padding: 0.3rem 1rem;margin-top:0.3rem;">
+                                    Join Zoom
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <button type="button" class="btn upcoming-event-btn" onclick="showUpcomingEvent()">
+                        <div style="display: flex;justify-content: space-between;">
+                            <div style="display: flex;justify-content: start;">
+                                <div>Upcoming Events</div>
+                                <div class="upcoming-event-arrow">
+                                    <img src="./image/svg/right-arrow-backup-2-svgrepo-com.svg" alt="" width="20"
+                                        height="20">
+                                </div>
+                            </div>
+
+                            <div class="upcoming-select-div">
+                                <select class="upcoming-select">
+                                    <option value="all">All</option>
+                                    <option value="select">Select</option>
+                                </select>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="upcoming-event-group" style="width:100%;">
+                        <div class="row daily-event-row">
+                            <div class="col-md-8 daily-event-heading">
+                                UwsS bi-weekly regular meeting (alternate week with iTL meeting)
+                            </div>
+                            <div class="col-md-4 daily-event-time">
+                                <div>10:00am - 12:00pm</div>
+                                <div style="color: rgb(192, 192, 192);">1F, Room 4</div>
+                            </div>
+                        </div>
+
+                        <div class="row daily-event-row">
+                            <div class="col-md-8 daily-event-heading">
+                                Web & mobility technologies team pre-meeting
+                            </div>
+                            <div class="col-md-4 daily-event-time">
+                                <div>4:00pm - 6:00pm</div>
+                                <button type="button" class="btn"
+                                    style="color: white;background-color: rgb(99, 136, 178);border-radius: 20px;padding: 0.3rem 1rem;margin-top:0.3rem;">
+                                    Join Zoom
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="row daily-event-row">
+                            <div class="col-md-8 daily-event-heading">
+                                <div>ECON1210-1A(005)</div>
+                                <div style="color: rgb(192, 192, 192);">introductory microeconomics</div>
+                            </div>
+                            <div class="col-md-4 daily-event-time">
+                                <div>19 Feb 2023<br>1:30pm - 2:15pm</div>
+                                <div style="color: rgb(192, 192, 192);">CFO.LG07</div>
+                            </div>
+                        </div>
+                        <div class="row daily-event-row">
+                            <div class="col-md-8 daily-event-heading">
+                                <div>Chinese new year</div>
+                                <div style="color: rgb(192, 192, 192);">holiday</div>
+                            </div>
+                            <div class="col-md-4 daily-event-time">
+                                <div>4:00pm - 6:00pm</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="more-div">
+                    <div style="border-radius: 50%;background-color: rgb(158, 180, 123);
+                    height: 30px;width: 30px;display: flex; align-items: center;justify-content: center;
+                    margin-right: 1rem;">4</div>
+                    <div>more...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JQuery cdn-->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+    <!-- Import own script -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
